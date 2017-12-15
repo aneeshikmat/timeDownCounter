@@ -29,3 +29,45 @@ And you can custmize you'r template as yourr like, we give you an option to buil
 
 Nothing.
 
+## Installation:
+The preferred way to install this extension is through [composer](https://getcomposer.org/).
+
+Either run
+
+`php composer.phar require --prefer-dist aneeshikmat/timeDownCounter "*@dev"`
+
+or you can install function with examples from:
+http://2nees.com/timeDownCounter.php
+
+## Usage
+To use this function you need to add this code to your html: 
+```
+<body>
+............
+
+<script type="text/javascript" src="timeDownCounter.js"></script>
+<script>
+    // Run Default Counter option
+    timeDownCounter({
+        //options
+    }).startCountDown();
+</script>
+</body>
+
+```
+As you see, its very simple, and now we will be explaning this code, and then go to display all option may be use to help us,
+In prev code we call timeDownCounter function, **startCountDown()** is used to start count down timer.(if you write this syntax dirctly without determind any option, you will git time over message).
+
+Now let's go to explain all possible option:
+
+```
+timeDownCounter({
+                'countDownIdSelector': 'time-down-counter-3',
+                'countDownDate':  new Date("Sep 5, 2018 15:37:25").getTime(),
+                'countDownResSperator': '-'
+                'countDownReturnData': 'from-hours',
+                'addSpanForResult': true,
+                'addSpanForEachNum': true,
+                'contDownOver': 'Time is expired, and you can say hello now :P',
+            }).startCountDown();
+```
