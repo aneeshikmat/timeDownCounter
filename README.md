@@ -44,7 +44,7 @@ To use this function you need to add this code to your html:
 ```
 <body>
 ............
-
+<div id="time-down-counter"></div>
 <script type="text/javascript" src="timeDownCounter.js"></script>
 <script>
     // Run Default Counter option
@@ -62,7 +62,7 @@ Now let's go to explain all possible option:
 
 ```
 timeDownCounter({
-                'countDownIdSelector': 'time-down-counter-3',
+                'countDownIdSelector': 'time-down-counter',
                 'countDownDate':  new Date("Sep 5, 2018 15:37:25").getTime(),
                 'countDownResSperator': '-'
                 'countDownReturnData': 'from-hours',
@@ -71,3 +71,20 @@ timeDownCounter({
                 'contDownOver': 'Time is expired, and you can say hello now :P',
             }).startCountDown();
 ```
+1) countDownIdSelector: This option give you apilty to change default timer wrapper, its usfall if you have more than one timer in the same html page, default selctor value is 'time-down-counter', and this selector must be an ID.
+
+2) countDownDate: This option will accept count down date in millisecond, if you keep it empty the default value will be current time so that the count down over message will be print.
+Note: if you using **PHP** you can use strtotime('....') * 1000 like **strtotime("+1 day") * 1000;**.
+
+3) countDownResSperator: This option give you apilty to change time Sperator, default sperator is **:** nested in <span> tag.
+    
+4) countDownReturnData: This option give you apilty to display full timer result (days, hours, minutes, seconds), or (hours, minutes, seconds) or (minutes, seconds), and accpet options is ('from-days' is default, 'from-hours', 'from-minutes').
+Note: This option will kep timer work nomraly without removed any value, just hide / show option.
+
+5) addSpanForResult: This option give you apilty to set each number groub in <span> tag contain general class called **item-counter-down**.
+    
+6) addSpanForEachNum: This option give you apilty to set each number in timer in <span> tag contain general class called **inner-item-counter-down**. 
+    
+##screenshot for html result for proint 5 and 6: 
+![Yii2 timeDownCounter screenshot_temo2](http://2nees.com/github/timeDownCounter/temp-3.png)
+   
