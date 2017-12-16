@@ -86,7 +86,7 @@ Note: This option will kep timer work nomraly without removed any value, just hi
     
 6) addSpanForEachNum: This option give you apilty to set each number in timer in <span> tag contain general class called **inner-item-counter-down**. 
     
-## screenshot for html result for proint 5 and 6: 
+## screenshot for html result for point 5 and 6: 
 
 ![Yii2 timeDownCounter screenshot_temo2](http://2nees.com/github/timeDownCounter/temp-3.png)
 
@@ -94,6 +94,7 @@ Note: This option will kep timer work nomraly without removed any value, just hi
 
 8) getTemplateResult: This option give you apilty to stop count down timer, the default value is **0** and thats mean timer work, **1** is mean stop timer and display timer result, **2** is mean stop timer and display html timer result.
 These option give you abilty to design / styling timer on browser dirctly, since the timer is work depednace of Interval function, and second option is usfall when you need to get result to set default value in html, since js need some time to start timing.
+
 example if we use **getTemplateResult: 2** :
 ```
 <div id="time-down-counter">30<span class="timeDownSperator">:</span>23<span class="timeDownSperator">:</span>59<span class="timeDownSperator">:</span>58</div>
