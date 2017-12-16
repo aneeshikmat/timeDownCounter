@@ -34,7 +34,7 @@ The preferred way to install this extension is through [composer](https://getcom
 
 Either run
 
-`php composer.phar require --prefer-dist aneeshikmat/timeDownCounter "*@dev"`
+`php composer.phar require --prefer-dist aneeshikmat/time-down-counter "*@dev"`
 
 or you can install function with examples from:
 http://2nees.com/timeDownCounter
