@@ -37,7 +37,7 @@ Either run
 `php composer.phar require --prefer-dist aneeshikmat/timeDownCounter "*@dev"`
 
 or you can install function with examples from:
-http://2nees.com/timeDownCounter.php
+http://2nees.com/timeDownCounter
 
 ## Usage
 To use this function you need to add this code to your html: 
