@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+Time Down Counte
+-->
+<html>
+    <head>
+        <title>Time Down Counter JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <style>
+            .mr-20 {
+                margin: 20px;
+            }
+            
+            .time-down-counter {
+                
+            }
+            
+            .item-counter-down {
+                background: #c0c0c0;
+                display: inline-block;
+                padding: 15px;
+                font-size: 45px;
+                color: #fff;
+                border-radius: 20%;
+                margin: 0 5px;
+            }
+            
+            .inner-item-counter-down {
+                
+            }
+            
+            .timeDownSperator {
+                font-size: 45px;
+                color: #c0c0c0;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="time-down-counter" class="time-down-counter text-center mr-20">
+                
+            </div>
+        </div>
+        <!-- Include Js Time Down Counter -->
+        <script type="text/javascript" src="../timeDownCounter.min.js"></script>
+        <script>
+            // Get Current date and add one month (To keep example work when you see it)
+            var daynamicDate = new Date();
+            daynamicDate.setMonth(daynamicDate.getMonth() + 1);
+            
+            // Demo 3 - Run Counter With option
+            timeDownCounter({
+                'countDownDate': daynamicDate.getTime(), // Direct Use like: new Date("Sep 5, 2018 15:37:25").getTime();
+                'addSpanForResult': true,// Set class for each time group (nest days, hours, minutes, second in spans) its usfall for styling groub
+                'addSpanForEachNum': true,// Set Class and span for each number (its usfall for sperate counter style
+            }).startCountDown();
+        </script>
+    </body>
+</html>
