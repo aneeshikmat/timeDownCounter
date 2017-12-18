@@ -3,10 +3,11 @@
 *  
 *  @dev Anees Hikmat
 *  @dev-email: aneeshikmat@gmail.com
+*  Github: https://github.com/aneeshikmat/timeDownCounter
 */
 
 // Global timeDownCounter Object
-var timeDownCounter = function (options) {
+var timeDownCounter = function (options, whenDone) {
     var contDownOver = "EXPIRED";
     var countDownIdSelector = 'time-down-counter';
     var countDownReturnData;// returned data from from-days, from-hours, from-minutes, def value from days
@@ -29,6 +30,12 @@ var timeDownCounter = function (options) {
         return ( num.toString().length < 2 ? "0"+num : num ).toString();
     }
 
+    // Timer CallBack funtion
+    function timerCallBack(){
+        if(whenDone && typeof(whenDone) === "function"){
+            whenDone();
+        }
+    }
     // Update the count down every 1 second
     return {
         startCountDown: function () {
@@ -78,6 +85,7 @@ var timeDownCounter = function (options) {
                     }else{
                         document.getElementById(countDownIdSelector).innerHTML = countDownReturnDataResult;
                     }
+                    timerCallBack();
                     return;
                 }
                 
@@ -88,8 +96,9 @@ var timeDownCounter = function (options) {
                 if (distance < 0) {
                     clearInterval(start);
                     document.getElementById(countDownIdSelector).innerHTML = contDownOver;
+                    timerCallBack();
                 }
             }, 1000);
-        }
+        },
     };
 };

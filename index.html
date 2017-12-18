@@ -95,6 +95,24 @@ Time Down Counter Samples
             </div>
 
             <hr />
+            
+            <div id="demo-5" class="alert alert-success">
+                <div id="time-down-counter-5" class="text-center mb-10">
+
+                </div>
+                <pre>
+                    <code>
+                        // Run Counter with callback funtion
+                        timeDownCounter({
+                            'countDownIdSelector': 'time-down-counter-5',// Set id for counter, default one is time-down-counter
+                        }, function(){
+                            alert('time-down-counter-5 is called callback function');
+                        }).startCountDown();
+                    </code>
+                </pre>
+            </div>
+
+            <hr />
         </div>
         <!-- Include Js Time Down Counter -->
         <script type="text/javascript" src="timeDownCounter.min.js"></script>
@@ -130,6 +148,13 @@ Time Down Counter Samples
                 'countDownResSperator': ' *_^ ',// Set New Sperator between times
                 'addSpanForResult': true,// Set class for each time group (nest days, hours, minutes, second in spans) its usfall for styling groub
                 'getTemplateResult': 1 // option to display curent result without its continue work, its usfall if you like to style and seeing item on browser dirctly, by default its 0 (option is 0, 1, 2)
+            }).startCountDown();
+            
+            // Run Counter with callback funtion
+            timeDownCounter({
+                'countDownIdSelector': 'time-down-counter-5',// Set id for counter, default one is time-down-counter
+            }, function(){
+                document.getElementById('time-down-counter-5').innerHTML = 'time-down-counter-5 is called callback function';
             }).startCountDown();
         </script>
     </body>
