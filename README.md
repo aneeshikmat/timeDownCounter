@@ -99,3 +99,16 @@ example if we use **getTemplateResult: 2** :
 ```
 <div id="time-down-counter">30<span class="timeDownSperator">:</span>23<span class="timeDownSperator">:</span>59<span class="timeDownSperator">:</span>58</div>
 ```
+
+## Callback function
+
+```
+
+// Run Counter with callback funtion, callback function will be come after options object like [ timeDownCounter({}, callback()) ]
+timeDownCounter({
+    'countDownIdSelector': 'time-down-counter-5',// Set id for counter, default one is time-down-counter
+}, function(){
+    document.getElementById('time-down-counter-5').innerHTML = 'time-down-counter-5 is called callback function';
+}).startCountDown();
+
+```
