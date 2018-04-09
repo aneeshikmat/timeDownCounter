@@ -90,7 +90,7 @@ Note: This option will kep timer work nomraly without removed any value, just hi
 
 ![Yii2 timeDownCounter screenshot_temo2](http://2nees.com/github/timeDownCounter/temp-3.png)
 
-7) contDownOver: This option give you apilty to update message for count down over (when timer is finshed).
+7) countDownOver: This option give you apilty to update message for count down over (when timer is finshed).
 
 8) getTemplateResult: This option give you apilty to stop count down timer, the default value is **0** and thats mean timer work, **1** is mean stop timer and display timer result, **2** is mean stop timer and display html timer result.
 These option give you abilty to design / styling timer on browser dirctly, since the timer is work depednace of Interval function, and second option is usfall when you need to get result to set default value in html, since js need some time to start timing.
