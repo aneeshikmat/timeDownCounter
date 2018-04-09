@@ -8,7 +8,7 @@
 
 // Global timeDownCounter Object
 var timeDownCounter = function (options, whenDone) {
-    var contDownOver = "EXPIRED";
+    var countDownOver = "EXPIRED";
     var countDownIdSelector = 'time-down-counter';
     var countDownReturnData;// returned data from from-days, from-hours, from-minutes, def value from days
     var countDownResSperator = '<span class="timeDownSperator">:</span>';
@@ -95,7 +95,7 @@ var timeDownCounter = function (options, whenDone) {
                 // If the count down is over, write some text
                 if (distance < 0) {
                     clearInterval(start);
-                    document.getElementById(countDownIdSelector).innerHTML = contDownOver;
+                    document.getElementById(countDownIdSelector).innerHTML = countDownOver;
                     timerCallBack();
                 }
             }, 1000);
