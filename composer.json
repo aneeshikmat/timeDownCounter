@@ -3,10 +3,8 @@
   "description": "JS function give the developer appilty to easy start count down timer with alot of options",
   "type": "javascript-function",
   "license": "MIT",
-  {
-    "minimum-stability": "dev",
-    "prefer-stable": true
-  }
+"minimum-stability": "stable",
+"prefer-stable": true
   "keywords": [
     "time",
     "down",
