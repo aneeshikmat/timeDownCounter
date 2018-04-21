@@ -3,7 +3,7 @@
   "description": "JS function give the developer appilty to easy start count down timer with alot of options",
   "type": "javascript-function",
   "license": "MIT",
-  "version": "1.0.0",
+  "minimum-stability": "stable",
   "keywords": [
     "time",
     "down",
